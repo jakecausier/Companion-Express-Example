@@ -5,7 +5,7 @@ module.exports = {
         if (!metadata.user_id) {
           throw new Error('No User ID passed in request')
         }
-        return `${metadata.user_id}/${filename}`
+        return `${metadata.user_id}/${metadata.order_id}/${filename}`
       },
       key: process.env.AWS_KEY,
       secret: process.env.AWS_SECRET,
